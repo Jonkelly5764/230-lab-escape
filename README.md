@@ -23,7 +23,7 @@ $ vim digits.c
 
 *Editor Hints:*
 
-* To save and quit `vim`, type `esc` (escape key), followed by `:` and `w` and `enter` to save the file then `:` followed by `q` and `return`.
+* To save and quit `vim`, type `esc` (escape key), followed by `:` and `w` and `enter` to save the file then `:` followed by `q` and `enter`.
 * To save and quit `emacs`, type `ctrl-x` followed by `ctrl-s` to save the file then `ctrl-x` followed by `ctrl-c`.
 * To save and quit `nano`, `ctrl-o` to save the file, `ctrl-x` to quit.
 
