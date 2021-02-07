@@ -4,6 +4,15 @@
 In this lab we will practice the most commonly used gdb commands, in preparation
 for the *Escape Project*.
 
+To start working on this lab you must be logged in to the Edlab and in your
+`cs230` directory. From this directory run the command:
+
+```
+$ git clone git@github.com:umass-cs-230/230-lab-escape.git
+```
+
+This will use the git version control system to download the lab from Github.
+
 ## Part 1
 
 Open `digits.c` and inspect the code in the `emacs`, `vim`, or `nano` editors:
@@ -92,7 +101,18 @@ $ gdb -tui digits
 
 ## Part 2
 
-For this part you are asked to debug a program `debug_calc` that is already compiled with flag `-g`, without access to the source code. There are four functions in this program: `main()`, `sum_calc()`, `mean_calc()`, and `magic_calc()`:
+For this part you are asked to debug a program `debug_calc`. To really test your
+understanding of `gdb` you should do this exercise without opening the supplied
+`debug_calc.c` source file until you have completely finished the exercise.
+
+First, compile the program with the `-g` flag:
+
+```
+$ gcc -g debug_calc.c -o debug_calc
+```
+
+There are four functions in this program: `main()`, `sum_calc()`, `mean_calc()`, and `magic_calc()`:
+
 
 * The function `sum_calc()` calculates the sum of the elements of an int array.
 * The function `mean_calc()` calculates the mean of the elements of an int array.
