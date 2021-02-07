@@ -14,15 +14,19 @@ Compile the program with -g flag (gcc -g digits.c -o digits), and do the
 following in gdb:
 
   1. Set breakpoints at line 18 and line 24.
-  2. Go through all iterations of the loop (hint: use next and/or continue), and
-     display the value of int variable c in each iteration at both breakpoints
-     (hint: use display).
+  2. Go through all iterations of the loop (use next and/or continue), and
+     display the value of int variable c in each iteration at both breakpoints (use
+     display).
   3. Run the program again in gdb, and delete the first break point (at line 18)
      but keep the second (line 24). Step into function validate_digit(), and
      print the value of digit.
   4. Run the program again in gdb with the only breakpoint at line 24. Call
-     function validate_digit() with argument c from gdb. You should be able to
-     see the returned value of validate_digit().
+     function validate_digit() with argument c from gdb (use call). You should
+     be able to see the returned value of validate_digit().
+  5. Run the program again in gdb with the only breakpoint at line 24. Enter a
+     single character that is not 9. When the program is stopped at the
+     breakpoint, change the value of variable c to an appropriate integer so
+     that the program considers it a "good digit" (use set var).
 
 
 Part 2
