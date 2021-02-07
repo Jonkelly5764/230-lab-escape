@@ -8,7 +8,7 @@ To start working on this lab you must be logged in to the Edlab and in your
 `cs230` directory. From this directory run the command:
 
 ```
-$ git clone git@github.com:umass-cs-230/230-lab-escape.git
+$ git clone https://github.com/umass-cs-230/230-lab-escape
 ```
 
 This will use the git version control system to download the lab from Github.
