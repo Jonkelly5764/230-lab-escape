@@ -30,21 +30,21 @@ and do the following in gdb. Start by running gdb with:
         undisplay 1
   3. Delete the first break point (at line 18) but keep the second (line 24):
         clear 18
-     Run the program again in gdb. When the program hit the breakpoint, step
-     into function validate_digit():
+     Run the program again. When the program hit the breakpoint, step into
+     function validate_digit():
         step
      and immediately print the value of digit:
         print digit
      Advance the program by one line (use next), and print the value of digit
      again. You should get different numbers.
-  4. Run the program again in gdb with the only breakpoint at line 24. Call
-     function validate_digit() with argument c from gdb:
+  4. Run the program again with the only breakpoint at line 24. Call function
+     validate_digit() with argument c from gdb:
         call validate_digit(c)
      You should be able to see the returned value of validate_digit().
-  5. Run the program again in gdb with the only breakpoint at line 24. Enter a
-     single character that is not 9. When the program is stopped at the
-     breakpoint, change the value of variable c to an appropriate integer so
-     that the program considers it a "good digit":
+  5. Run the program again with the only breakpoint at line 24. Enter a single
+     character that is not 9. When the program is stopped at the breakpoint,
+     change the value of variable c to an appropriate integer so that the
+     program considers it a "good digit":
         set var c=9
 
 
@@ -61,7 +61,8 @@ functions in this program: main(), sum_calc(), mean_calc(), and magic_calc():
 There is a bug in sum_calc() or mean_calc(). You are asked to use gdb to find
 out what the bug is. Do the following in gdb:
 
-  1. Set a breakpoint at main().
+  1. Set a breakpoint at main():
+        b main
   2. Go through every line of main (use next and/or continue) to see what the
      program does. You may find setting another breakpoint useful.
   3. You will have noticed that the values of the int variable sum and the
