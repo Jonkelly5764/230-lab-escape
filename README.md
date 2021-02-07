@@ -10,7 +10,8 @@ Part 1
 
 Open digits.c and inspect the code in emacs or vim:
         vim digits.c
-(To quit vim, type Esc (escape key), followed by :, followed by q.)
+(To quit vim, type Esc (escape key), followed by :, followed by q, followed by
+the enter key.)
 
 Compile the program with -g flag:
         gcc -g digits.c -o digits
