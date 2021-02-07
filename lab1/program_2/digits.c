@@ -20,6 +20,7 @@ int main(int argc, char **argv) {
                 printf("exiting...\n");
                 return 0;
             }
+            c = c - '0';
             alldigits = alldigits && validate_digit(c);
         }
         if(alldigits) {
