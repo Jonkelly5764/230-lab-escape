@@ -112,7 +112,7 @@ There is a bug in `sum_calc()` or `mean_calc()`. You are asked to use `gdb` to f
 4. Step into the function `magic_calc()` to find out why the `double` variable
      `magic` has the printed value.
 
-You will report your findings from bullets 3 and 4 in the associated lab assignment on Gradescope.
+You will report your findings from bullets 3 and 4 in the associated lab assignment for this course on Gradescope.
 
 
 
