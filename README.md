@@ -8,25 +8,44 @@ for Project 1.
 
 Part 1
 
-Open digit.c and inspect the code.
+Open digits.c and inspect the code in emacs or vim:
+        vim digits.c
+(To quit vim, type Esc (escape key), followed by :, followed by q.)
 
-Compile the program with -g flag (gcc -g digits.c -o digits), and do the
-following in gdb:
+Compile the program with -g flag:
+        gcc -g digits.c -o digits
+and do the following in gdb. Start by running gdb with:
+        gdb digits
 
-  1. Set breakpoints at line 18 and line 24.
-  2. Go through all iterations of the loop (use next and/or continue), and
-     display the value of int variable c in each iteration at both breakpoints (use
-     display).
-  3. Run the program again in gdb, and delete the first break point (at line 18)
-     but keep the second (line 24). Step into function validate_digit(), and
-     print the value of digit.
+  1. Set breakpoints at line 18 and line 24:
+        break 18
+        b 24
+  2. Start the program with:
+        run
+     Go through all iterations of the loop (use next and/or continue), and
+     display the value of int variable c in each iteration at both breakpoints
+     with:
+        display c
+     To cancel display requests, use undisplay. Specifically in our case:
+        undisplay 1
+  3. Delete the first break point (at line 18) but keep the second (line 24):
+        clear 18
+     Run the program again in gdb. When the program hit the breakpoint, step
+     into function validate_digit():
+        step
+     and immediately print the value of digit:
+        print digit
+     Advance the program by one line (use next), and print the value of digit
+     again. You should get different numbers.
   4. Run the program again in gdb with the only breakpoint at line 24. Call
-     function validate_digit() with argument c from gdb (use call). You should
-     be able to see the returned value of validate_digit().
+     function validate_digit() with argument c from gdb:
+        call validate_digit(c)
+     You should be able to see the returned value of validate_digit().
   5. Run the program again in gdb with the only breakpoint at line 24. Enter a
      single character that is not 9. When the program is stopped at the
      breakpoint, change the value of variable c to an appropriate integer so
-     that the program considers it a "good digit" (use set var).
+     that the program considers it a "good digit":
+        set var c=9
 
 
 Part 2
