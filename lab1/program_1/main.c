@@ -40,8 +40,6 @@ int main(int argc, char *argv[]) {
         arr[i] = i;
     }
 
-    int index = 0;
-
     int sum = sum_calc(arr, 50);
     printf("Sum here! : %d\n", sum);
 
