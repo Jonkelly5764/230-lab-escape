@@ -30,15 +30,16 @@ and do the following in gdb. Start by running gdb with:
         undisplay 1
   3. Delete the first break point (at line 18) but keep the second (line 24):
         clear 18
-     Run the program again. When the program hit the breakpoint, step into
+     Run the program again. When the program hits the breakpoint, step into
      function validate_digit():
         step
      and immediately print the value of digit:
         print digit
      Advance the program by one line (use next), and print the value of digit
      again. You should get different numbers.
-  4. Run the program again with the only breakpoint at line 24. Call function
-     validate_digit() with argument c from gdb:
+  4. Run the program again with the only breakpoint at line 24. When the program
+     hits the breakpoint, call function validate_digit() with argument c from
+     gdb:
         call validate_digit(c)
      You should be able to see the returned value of validate_digit().
   5. Run the program again with the only breakpoint at line 24. Enter a single
