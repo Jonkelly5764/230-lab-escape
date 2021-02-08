@@ -38,6 +38,10 @@ and do the following in `gdb`. Start by running `gdb` with TUI enabled:
 $ gdb -tui digits
 ```
 
+*GDB Hints*
+
+* Remember, if the `gdb` screen looks funny you should type `ctrl-l` (the control key and l (lowercase L) at the same time) to redraw the screen. This is a funny quirk with this debugger that you just need to deal with. This odd behavior seems to happen after I/O operations are performed (such as `printf`).
+
 1. You will be asked to submit a log of your GDB commands and output on Gradescope as part of this lab. Fortunately, `gdb` provides some commands that will automatically log your interactions with it to a file. Do the following to enable this:
 
    ```
