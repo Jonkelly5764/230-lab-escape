@@ -38,14 +38,21 @@ and do the following in `gdb`. Start by running `gdb` with TUI enabled:
 $ gdb -tui digits
 ```
 
-1. Set breakpoints at line 18 and line 24:
+1. You will be asked to submit a log of your GDB commands and output on Gradescope as part of this lab. Fortunately, `gdb` provides some commands that will automatically log your interactions with it to a file. Do the following to enable this:
+
+   ```
+   (gdb) set logging file gdb.part1.txt
+   (gdb) set logging on
+   ```
+
+2. Set breakpoints at line 18 and line 24:
 
    ```
    (gdb) break 18
    (gdb) b 24
    ```
 
-2. Start the program with:
+3. Start the program with:
    
    ```
    (gdb) run
@@ -63,7 +70,7 @@ $ gdb -tui digits
    (gdb) undisplay 1
    ```
 
-3. Delete the first break point (at line 18) but keep the second (line 24):
+4. Delete the first break point (at line 18) but keep the second (line 24):
 
    ```
    (gdb) clear 18
@@ -83,7 +90,7 @@ $ gdb -tui digits
    
    Advance the program by one line (use next), and print the value of digit again. You should get different numbers.
 
-4. Run the program again with the only breakpoint at line 24. When the program
+5. Run the program again with the only breakpoint at line 24. When the program
      encounters the breakpoint, call function `validate_digit()` with argument `c` from `gdb`:
 
    ```
@@ -92,7 +99,7 @@ $ gdb -tui digits
 
    You should be able to see the returned value of `validate_digit()`.
 
-5. Run the program again with the only breakpoint at line 24. Enter a single character that is not 9. When the program is stopped at the breakpoint, change the value of variable `c` to an appropriate integer so that the program considers it a "good digit":
+6. Run the program again with the only breakpoint at line 24. Enter a single character that is not 9. When the program is stopped at the breakpoint, change the value of variable `c` to an appropriate integer so that the program considers it a "good digit":
 
    ```
    (gdb) set var c=9
@@ -119,21 +126,33 @@ There are four functions in this program: `main()`, `sum_calc()`, `mean_calc()`,
 
 There is a bug in `sum_calc()` or `mean_calc()`. You are asked to use `gdb` to find out what the bug is. Do the following in `gdb`:
 
-1. Set a breakpoint at `main()`:
+1. Record your `gdb` interactions in a file:
+
+   ```
+   (gdb) set logging file gdb.part2.txt
+   (gdb) set logging on
+   ```
+
+2. Set a breakpoint at `main()`:
 
    ```
    (gdb) b main
    ```
 
-2. Go through every line of main (use `next` and/or `continue`) to see what the program does. You may find setting another breakpoint useful.
-3. You will have noticed that the values of the `int` variable `sum` and the
+3. Go through every line of main (use `next` and/or `continue`) to see what the program does. You may find setting another breakpoint useful.
+
+4. You will have noticed that the values of the `int` variable `sum` and the
      `double` variable `mean` are not correct. Step into the functions `sum_cal()` and `mean_calc()` to find the bug.
-4. Step into the function `magic_calc()` to find out why the `double` variable
+     
+5. Step into the function `magic_calc()` to find out why the `double` variable
      `magic` has the printed value.
 
 You will report your findings from bullets 3 and 4 in the associated lab assignment for this course on Gradescope.
 
-Copy your `gdb` output into a text file (`output.txt`) that shows you have done all the steps specified above. You will upload this text file to Gradescope.
+Lastly, catenate the output from both interactions into a single file called `output.txt`. You will upload this text file to Gradescope. You can do this easily from the command line with:
 
+```
+$ cat gdb.part1.txt gdb.part2.txt > output.txt
+```
 
-
+Visit the Gradescope assignment associated with this lab to complete the lab.
