@@ -1,8 +1,7 @@
 # COMPSCI 230 Spring 2021
-# Escape Lab
+# Debugging with GDB Lab
 
-In this lab we will practice the most commonly used gdb commands, in preparation
-for the *Escape Project*.
+In this lab we will practice the most commonly used gdb commands.
 
 To start working on this lab you must be logged in to the Edlab and in your
 `cs230` directory. From this directory run the command:
