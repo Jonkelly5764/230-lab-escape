@@ -159,6 +159,6 @@ Lastly, catenate the output from both interactions into a single file called `ou
 $ cat gdb.part1.txt gdb.part2.txt > output.txt
 ```
 
-`output.txt` can easily be downloaded to your host platform using `sftp` and then uploaded to Gradescope.
+The generated `output.txt` file can easily be downloaded to your host platform using `sftp` and then uploaded to Gradescope.
 
 Visit the Gradescope assignment associated with this lab to complete the lab.
