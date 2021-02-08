@@ -134,5 +134,7 @@ There is a bug in `sum_calc()` or `mean_calc()`. You are asked to use `gdb` to f
 
 You will report your findings from bullets 3 and 4 in the associated lab assignment for this course on Gradescope.
 
+Copy your `gdb` output into a text file (`output.txt`) that shows you have done all the steps specified in the lab. You will upload this text file to Gradescope.
+
 
 

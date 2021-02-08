@@ -6,7 +6,7 @@
 
 int validate_digit(int digit) {
     if(digit < 0 || digit > 9) return 0; //not a digit!
-    return digit == 9;//only correct digits are good
+    return digit == 9; //only correct digits are good
 }
 
 int main(int argc, char **argv) {
